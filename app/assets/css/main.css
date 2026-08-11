@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import 'primeicons/primeicons.css';
+@import "@fortawesome/fontawesome-svg-core/styles.css";
 
 @theme {
   /* ---- Palette: Alpine dog salon — moss, sand, clay, gold ---- */
@@ -24,10 +24,13 @@
   --color-ink-900: #211f1a;
   --color-ink-700: #4a453c;
 
-  /* ---- Type ---- */
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
-  --font-body: "Work Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-tag: "IBM Plex Mono", ui-monospace, monospace;
+  /* ---- Type: system stack, no webfonts ---- */
+  --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-tag: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 
   --shadow-tag: 0 6px 16px -8px rgba(32, 43, 29, 0.35);
 }
@@ -41,11 +44,6 @@
     background-color: var(--color-sand-50);
     color: var(--color-ink-900);
     font-family: var(--font-body);
-  }
-
-  h1, h2, h3, h4 {
-    font-family: var(--font-display);
-    letter-spacing: -0.01em;
   }
 
   /* Visible keyboard focus everywhere */
@@ -97,7 +95,6 @@
   }
 
   .eyebrow-tag {
-    font-family: var(--font-tag);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     font-size: 0.72rem;

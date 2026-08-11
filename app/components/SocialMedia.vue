@@ -1,6 +1,6 @@
 <template>
   <a
-    href="https://www.instagram.com/pfotenstyle.wattens/"
+    href="https://www.instagram.com/"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Instagram"
@@ -10,12 +10,12 @@
   </a>
 
   <a
-    href="https://www.facebook.com/pfotenstyle.wattens"
+    href="https://www.facebook.com/"
     target="_blank"
     rel="noopener"
     class="flex h-10 w-10 items-center justify-center rounded-full border border-sand-100/25 transition-colors hover:bg-sand-100/10"
     aria-label="Instagram"
   >
-  <UiIconsIconFacebook class="h-full w-full"/>
+    <UiIconsIconFacebook class="h-full w-full" />
   </a>
 </template>
