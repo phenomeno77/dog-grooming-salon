@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Palette: Alpine dog salon — moss, sand, clay, gold ---- */
+  --color-moss-900: #202b1d;
+  --color-moss-800: #2c3a27;
+  --color-moss-700: #3f5237;
+  --color-moss-600: #526b49;
+  --color-moss-500: #6c8462;
+  --color-moss-100: #e3e9dd;
+
+  --color-sand-50: #faf7f0;
+  --color-sand-100: #f3ede0;
+  --color-sand-200: #e9dfc9;
+
+  --color-clay-600: #b1552f;
+  --color-clay-500: #c76a3f;
+  --color-clay-400: #d98455;
+
+  --color-gold-500: #c68a3c;
+  --color-gold-400: #d9a75e;
+
+  --color-ink-900: #211f1a;
+  --color-ink-700: #4a453c;
+
+  /* ---- Type ---- */
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-tag: "IBM Plex Mono", ui-monospace, monospace;
+
+  --shadow-tag: 0 6px 16px -8px rgba(32, 43, 29, 0.35);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-sand-50);
+    color: var(--color-ink-900);
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  /* Visible keyboard focus everywhere */
+  :focus-visible {
+    outline: 3px solid var(--color-clay-500);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Signature element: hand-tag card, echoing the salon's handmade
+     leather/paracord collar tags. Used for services, prices, hours. */
+  .tag-card {
+    position: relative;
+    background: var(--color-sand-50);
+    border: 1px solid var(--color-sand-200);
+    border-radius: 0.9rem;
+    box-shadow: var(--shadow-tag);
+  }
+
+  .tag-card::before {
+    content: "";
+    position: absolute;
+    top: 1.1rem;
+    left: -0.55rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    background: var(--color-sand-50);
+    border: 1px solid var(--color-sand-200);
+    border-radius: 9999px;
+    box-shadow: inset 0 0 0 3px var(--color-moss-100);
+  }
+
+  /* Dashed "stitch" divider referencing paracord/leather stitching */
+  .stitch-divider {
+    border: none;
+    border-top: 2px dashed var(--color-moss-500);
+    opacity: 0.45;
+  }
+
+  .eyebrow-tag {
+    font-family: var(--font-tag);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+  }
+}
