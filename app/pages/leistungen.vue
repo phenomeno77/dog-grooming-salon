@@ -19,34 +19,28 @@ const basePrices = [
 ]
 
 const extras = [
-  { title: 'Verfilzung', desc: 'mehr Pflegeprodukte bei starker Verfilzung', price: 'Aufpreis € 35,--' },
-  { title: 'Trimmhunde', desc: null, price: 'Aufpreis € 40,--' },
-  { title: 'Gesicht schneiden', desc: null, price: '€ 35,--' },
-  { title: 'Flohbefall', desc: null, price: 'Aufpreis € 40,--' },
-  { title: 'Pfotenpflege', desc: null, price: '€ 25,--' }
+  { title: 'Verfilzung', desc: 'mehr Pflegeprodukte bei starker Verfilzung', price: 'Aufpreis € 35,--', label: 'Foto: Entfilzen' },
+  { title: 'Trimmhunde', desc: null, price: 'Aufpreis € 40,--', label: 'Foto: Trimmen' },
+  { title: 'Gesicht schneiden', desc: null, price: '€ 35,--', label: 'Foto: Gesichtsschnitt' },
+  { title: 'Flohbefall', desc: null, price: 'Aufpreis € 40,--', label: 'Foto: Flohbehandlung' },
+  { title: 'Pfotenpflege', desc: null, price: '€ 25,--', label: 'Foto: Pfotenpflege' }
 ]
 
 const wellness = [
-  {
-    group: 'Lasertherapie', items: [
-      { label: 'Vitalpunkte', price: '€ 15,-- / Einheit' },
-      { label: 'Akupunkturtherapie mit Laser', price: '€ 25,-- / Einheit' }
-    ]
-  },
-  {
-    group: 'Tierbalance und Tierenergetik', items: [
-      { label: 'Cranio Sacral Therapie', price: '€ 48,-- / Einheit' },
-      { label: 'Heilströmen', price: '€ 48,-- / Einheit' },
-      { label: 'Chakrenarbeit', price: '€ 38,-- / Einheit' }
-    ]
-  },
-  {
-    group: 'Naturheilkunde', items: [
-      { label: 'Beratung Aroma- und Kräuteröle', price: 'auf Anfrage' },
-      { label: 'Vitalpilzberatung', price: 'auf Anfrage' },
-      { label: 'Heilpendeln', price: 'auf Anfrage' }
-    ]
-  }
+  { group: 'Lasertherapie', label: 'Foto: Lasertherapie', items: [
+    { label: 'Vitalpunkte', price: '€ 15,-- / Einheit' },
+    { label: 'Akupunkturtherapie mit Laser', price: '€ 25,-- / Einheit' }
+  ] },
+  { group: 'Tierbalance und Tierenergetik', label: 'Foto: Tierenergetik', items: [
+    { label: 'Cranio Sacral Therapie', price: '€ 48,-- / Einheit' },
+    { label: 'Heilströmen', price: '€ 48,-- / Einheit' },
+    { label: 'Chakrenarbeit', price: '€ 38,-- / Einheit' }
+  ] },
+  { group: 'Naturheilkunde', label: 'Foto: Naturheilkunde', items: [
+    { label: 'Beratung Aroma- und Kräuteröle', price: 'auf Anfrage' },
+    { label: 'Vitalpilzberatung', price: 'auf Anfrage' },
+    { label: 'Heilpendeln', price: 'auf Anfrage' }
+  ] }
 ]
 </script>
 
@@ -96,7 +90,8 @@ const wellness = [
       <h2 class="font-display text-2xl font-semibold text-moss-900 sm:text-3xl">Zusatzleistungen</h2>
       <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         <div v-for="e in extras" :key="e.title" class="tag-card p-5 pl-7">
-          <p class="font-semibold text-moss-900">{{ e.title }}</p>
+          <ImgPlaceholder :label="e.label" ratio="aspect-[16/10]" tone="sand" />
+          <p class="mt-4 font-semibold text-moss-900">{{ e.title }}</p>
           <p v-if="e.desc" class="mt-1 text-sm text-ink-700">{{ e.desc }}</p>
           <p class="mt-2 font-tag text-sm text-clay-600">{{ e.price }}</p>
         </div>
@@ -111,10 +106,10 @@ const wellness = [
         </h2>
         <div class="mt-8 grid gap-8 md:grid-cols-3">
           <div v-for="group in wellness" :key="group.group">
-            <p class="eyebrow-tag text-clay-600">{{ group.group }}</p>
+            <ImgPlaceholder :label="group.label" ratio="aspect-[16/10]" tone="moss" />
+            <p class="mt-4 eyebrow-tag text-clay-600">{{ group.group }}</p>
             <ul class="mt-3 space-y-3">
-              <li v-for="item in group.items" :key="item.label"
-                class="flex items-baseline justify-between gap-3 border-b border-moss-200 pb-2 text-sm">
+              <li v-for="item in group.items" :key="item.label" class="flex items-baseline justify-between gap-3 border-b border-moss-200 pb-2 text-sm">
                 <span class="text-ink-700">{{ item.label }}</span>
                 <span class="whitespace-nowrap font-tag text-clay-600">{{ item.price }}</span>
               </li>
