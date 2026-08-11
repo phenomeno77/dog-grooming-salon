@@ -1,4 +1,3 @@
-```vue
 <script setup lang="ts">
 useHead({
   title: 'Über uns – Pfotenstyle by Dani',
@@ -36,20 +35,6 @@ const team = [
   }
 ]
 
-const customers = [
-  {
-    label: 'Foto: Kundenhund 1'
-  },
-  {
-    label: 'Foto: Kundenhund 2'
-  },
-  {
-    label: 'Foto: Kundenhund 3'
-  },
-  {
-    label: 'Foto: Kundenhund 4'
-  }
-]
 </script>
 
 <template>
@@ -153,35 +138,10 @@ const customers = [
           </p>
         </div>
 
-        <!-- Gallery -->
-        <div class="overflow-hidden rounded-2xl">
-          <Galleria
-            :value="customers"
-            :numVisible="5"
-            :circular="true"
-            :showThumbnails="true"
-            :showIndicators="true"
-            containerClass="w-full"
-          >
-            <!-- <template #item="slotProps">
-              <ImgPlaceholder
-                :label="slotProps.item.label"
-                ratio="aspect-[4/3]"
-                tone="sand"
-              />
-            </template>
-
-            <template #thumbnail="slotProps">
-              <ImgPlaceholder
-                :label="slotProps.item.label"
-                ratio="aspect-square"
-                tone="moss"
-              />
-            </template> -->
-          </Galleria>
-        </div>
+        
+        <ImgPlaceholder :label="'Galleria: Kundenhunde'" tone='sand'/>
+    
       </div>
     </section>
   </div>
 </template>
-```
