@@ -50,7 +50,7 @@ const wellness = [
       <div class="mx-auto max-w-4xl px-5 py-16 text-center md:px-8">
         <p class="eyebrow-tag text-gold-400">Services</p>
         <h1 class="mt-2 font-display text-3xl font-semibold text-sand-50 sm:text-4xl">
-          Hier findest du einen kleinen Überblick über unsere aktuellen Preise:
+          Hier findest du einen kleinen Überblick über unsere aktuellen Preise
         </h1>
         <p class="mx-auto mt-4 max-w-xl text-sm text-moss-100/80">
           Diese Preise sind Richtwerte und können je nach Arbeits- und Pflegeaufwand abweichen.
@@ -73,6 +73,10 @@ const wellness = [
         *der Grundpreis bezieht sich auf eine durchschnittliche Behandlungsdauer von 1,5 Stunden ·
         jede weitere Minute € 1,--
       </p>
+
+      <div class="mx-auto mt-6 max-w-sm">
+        <ImgPlaceholder label="FOTO: Kompletter Service" ratio="aspect-[16/10]" tone="sand" />
+      </div>
 
       <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
         <div v-for="p in basePrices" :key="p.size" class="tag-card p-5 text-center">
