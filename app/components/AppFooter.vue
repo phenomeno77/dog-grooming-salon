@@ -2,89 +2,134 @@
 import SocialMedia from "./SocialMedia.vue";
 
 const year = new Date().getFullYear();
+
+const explore = [
+  { label: "Home", to: "/" },
+  { label: "Über uns", to: "/ueber-uns" },
+  { label: "Leistungen", to: "/leistungen" },
+  { label: "Öffnungszeiten", to: "/oeffnungszeiten" },
+  { label: "Kontakt", to: "/kontakt" },
+];
+
+const legal = [
+  { label: "Impressum", to: "/impressum" },
+  { label: "AGB", to: "/agb" },
+  { label: "Datenschutz", to: "/datenschutz" },
+];
+
+const hours = [
+  { day: "Mo – Fr", time: "09:00 – 18:00" },
+  { day: "Samstag", time: "09:00 – 13:00" },
+  { day: "Sonntag", time: "geschlossen" },
+];
 </script>
 
 <template>
   <footer class="bg-moss-900 text-sand-100">
     <div
-      class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3 md:px-8"
+      class="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-2 md:px-8 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]"
     >
+      <!-- Brand -->
       <div>
-        <div
-          class="flex items-center gap-2 font-display text-xl font-semibold text-sand-50"
-        >
-          <PawMark class="h-6 w-6 text-gold-400" />
-          Pfotenstyle by Dani
+        <div class="flex items-center gap-2.5 text-sand-50">
+          <PawMark class="h-7 w-7 shrink-0 text-gold-400" />
+          <span class="flex flex-col leading-none">
+            <span class="font-display text-xl font-semibold tracking-tight"
+              >Fellwerk</span
+            >
+            <span class="eyebrow-tag mt-0.5 text-moss-100/50">Hundesalon</span>
+          </span>
         </div>
-        <p class="mt-3 max-w-xs text-sm leading-relaxed text-moss-100/80">
-          Dani und Petra kümmern sich um deinen Liebling — Pfotenstyle meets
-          Fellness in Wattens, Tirol.
+
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-moss-100/75">
+          Fellpflege ohne Zeitdruck – ein kleiner Salon mitten in Musterstadt,
+          in dem sich jeder Hund Zeit nehmen darf.
         </p>
-        <div class="mt-5 flex items-center gap-3">
+
+        <div class="mt-6 flex items-center gap-3">
           <SocialMedia />
         </div>
       </div>
 
+      <!-- Explore -->
+      <nav aria-labelledby="footer-explore">
+        <p id="footer-explore" class="eyebrow-tag text-gold-400">Entdecken</p>
+        <ul class="mt-4 space-y-2.5 text-sm text-moss-100/85">
+          <li v-for="item in explore" :key="item.to">
+            <NuxtLink
+              :to="item.to"
+              class="inline-flex items-center gap-2 transition-colors hover:text-sand-50"
+            >
+              {{ item.label }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Legal -->
+      <nav aria-labelledby="footer-legal">
+        <p id="footer-legal" class="eyebrow-tag text-gold-400">Rechtliches</p>
+        <ul class="mt-4 space-y-2.5 text-sm text-moss-100/85">
+          <li v-for="item in legal" :key="item.to">
+            <NuxtLink
+              :to="item.to"
+              class="transition-colors hover:text-sand-50"
+            >
+              {{ item.label }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Kontakt -->
       <div>
         <p class="eyebrow-tag text-gold-400">Kontakt</p>
-        <ul class="mt-3 space-y-2 text-sm text-moss-100/85">
-          <li>Weisstr. 9, W_28</li>
-          <li>Unternehmer- und Kreativzentrum Werkstätte Wattens</li>
-          <li>6112 Wattens</li>
-          <li>
-            <a
-              href="tel:+4366499671788"
-              class="underline decoration-gold-400/50 underline-offset-4 hover:text-sand-50"
-            >
-              +43 664 99671788
-            </a>
-          </li>
-          <li class="pt-1 text-moss-100/70">Terminvereinbarung notwendig!</li>
-        </ul>
-      </div>
 
-      <div>
-        <p class="eyebrow-tag text-gold-400">Kontakt</p>
-        <ul class="mt-3 space-y-2 text-sm text-moss-100/85">
-          <li>Weisstr. 9, W_28</li>
-          <li>Unternehmer- und Kreativzentrum Werkstätte Wattens</li>
-          <li>6112 Wattens</li>
-          <li>
-            <a
-              href="tel:+4366499671788"
-              class="underline decoration-gold-400/50 underline-offset-4 hover:text-sand-50"
-            >
-              +43 664 99671788
-            </a>
-          </li>
-          <li class="pt-1 text-moss-100/70">Terminvereinbarung notwendig!</li>
-        </ul>
-      </div>
+        <address class="mt-4 space-y-1 text-sm not-italic text-moss-100/85">
+          <p>Musterstraße 12</p>
+          <p>12345 Musterstadt</p>
+        </address>
 
-      <div>
-        <p class="eyebrow-tag text-gold-400">Rechtliches</p>
-        <ul class="mt-3 space-y-2 text-sm text-moss-100/85">
-          <li>
-            <NuxtLink to="/impressum" class="hover:text-sand-50"
-              >Impressum</NuxtLink
+        <a
+          href="tel:+49123456789"
+          class="mt-4 inline-flex items-center gap-2.5 text-sm font-semibold text-sand-50 transition-colors hover:text-gold-400"
+        >
+          <FontAwesomeIcon :icon="['fas', 'phone']" class="text-gold-400" />
+          01234 / 56 78 90
+        </a>
+
+        <ul class="mt-6 space-y-1.5 border-t border-sand-100/10 pt-5 text-sm">
+          <li
+            v-for="item in hours"
+            :key="item.day"
+            class="flex justify-between gap-4"
+          >
+            <span class="text-moss-100/60">{{ item.day }}</span>
+            <span
+              :class="
+                item.time === 'geschlossen'
+                  ? 'text-moss-100/40'
+                  : 'text-moss-100/85'
+              "
             >
-          </li>
-          <li>
-            <NuxtLink to="/agb" class="hover:text-sand-50">AGB's</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/datenschutz" class="hover:text-sand-50"
-              >Datenschutz</NuxtLink
-            >
+              {{ item.time }}
+            </span>
           </li>
         </ul>
+
+        <p class="mt-4 text-xs leading-relaxed text-moss-100/60">
+          Termine nur nach Vereinbarung.
+        </p>
       </div>
     </div>
 
-    <div
-      class="border-t border-sand-100/10 px-5 py-5 text-center font-tag text-[0.7rem] uppercase tracking-wider text-moss-100/50 md:px-8"
-    >
-      © {{ year }} Pfotenstyle by Dani · Wattens, Tirol
+    <div class="border-t border-sand-100/10">
+      <div
+        class="mx-auto flex max-w-6xl flex-col items-center gap-2 px-5 py-6 text-center font-tag text-[0.7rem] uppercase tracking-wider text-moss-100/45 sm:flex-row sm:justify-between sm:text-left md:px-8"
+      >
+        <p>© {{ year }} Fellwerk · Musterstadt</p>
+        <p>Alle Preise inkl. MwSt.</p>
+      </div>
     </div>
   </footer>
 </template>
