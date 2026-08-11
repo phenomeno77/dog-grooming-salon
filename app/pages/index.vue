@@ -53,16 +53,12 @@ const services = [
             ihr findet uns seit 4.11.24 in der Werkstätte Wattens - Weisstr. 9 W_28
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
-            <NuxtLink
-              to="/kontakt"
-              class="rounded-full bg-clay-500 px-6 py-3 text-sm font-semibold text-sand-50 shadow-tag transition-transform hover:-translate-y-0.5"
-            >
+            <NuxtLink to="/kontakt"
+              class="rounded-full bg-clay-500 px-6 py-3 text-sm font-semibold text-sand-50 shadow-tag transition-transform hover:-translate-y-0.5">
               Termin anfragen
             </NuxtLink>
-            <NuxtLink
-              to="/leistungen"
-              class="rounded-full border border-sand-100/30 px-6 py-3 text-sm font-semibold text-sand-50 transition-colors hover:bg-sand-100/10"
-            >
+            <NuxtLink to="/leistungen"
+              class="rounded-full border border-sand-100/30 px-6 py-3 text-sm font-semibold text-sand-50 transition-colors hover:bg-sand-100/10">
               Preisliste ansehen
             </NuxtLink>
           </div>
@@ -91,7 +87,8 @@ const services = [
         <p>Wir haben keine Staffelpreise, sondern rechnen nach zeitlichem Aufwand ab.</p>
         <p>Bei den meisten unserer Kunden muss Frauchen oder Herrchen mit ca. 1,5 Stunden Arbeitszeit rechnen.</p>
         <p>Manchmal etwas mehr und nur selten etwas weniger...</p>
-        <p>Verfilztes oder langes Haar beansprucht sowohl beim Waschen als auch Bürsten und dgl. mehr Zeit als Kurzhaar.</p>
+        <p>Verfilztes oder langes Haar beansprucht sowohl beim Waschen als auch Bürsten und dgl. mehr Zeit als Kurzhaar.
+        </p>
         <p>Ein kleiner Kerl der nicht stillhält braucht manchmal sogar länger, als eine gechillte Dogge.</p>
         <p>
           die aktuelle Preisliste findest du
@@ -105,7 +102,8 @@ const services = [
           <p class="font-semibold text-moss-900">Ausfallentschädigung</p>
           <p class="mt-1 text-sm leading-relaxed text-ink-700">
             für nicht fristgerecht abgesagte Termine wird eine Ausfallentschädigung in Höhe von 50,-- € fällig.
-            <NuxtLink to="/agb" class="font-semibold text-clay-600 underline underline-offset-4">(siehe AGB's)</NuxtLink>
+            <NuxtLink to="/agb" class="font-semibold text-clay-600 underline underline-offset-4">(siehe AGB's)
+            </NuxtLink>
           </p>
         </div>
       </div>
@@ -167,12 +165,9 @@ const services = [
           <h2 class="mt-2 font-display text-2xl font-semibold text-moss-900 sm:text-3xl">
             Dani und Petra kümmern sich um deinen Liebling!
           </h2>
-          <a
-            href="https://my.matterport.com/show/?m=okWpnE36hhH&sm=2&sr=-.8%2C-.73%2C-.59&sp=-29.48%2C24%2C19.26"
-            target="_blank"
-            rel="noopener"
-            class="mt-6 inline-flex items-center gap-2 rounded-full bg-moss-800 px-6 py-3 text-sm font-semibold text-sand-50 shadow-tag transition-transform hover:-translate-y-0.5"
-          >
+          <a href="https://my.matterport.com/show/?m=okWpnE36hhH&sm=2&sr=-.8%2C-.73%2C-.59&sp=-29.48%2C24%2C19.26"
+            target="_blank" rel="noopener"
+            class="mt-6 inline-flex items-center gap-2 rounded-full bg-moss-800 px-6 py-3 text-sm font-semibold text-sand-50 shadow-tag transition-transform hover:-translate-y-0.5">
             <i class="pi pi-compass" />
             Virtueller Rundgang
           </a>

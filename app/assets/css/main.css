@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import 'primeicons/primeicons.css';
 
 @theme {
   /* ---- Palette: Alpine dog salon — moss, sand, clay, gold ---- */

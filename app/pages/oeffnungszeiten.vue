@@ -49,7 +49,7 @@ const hours = [
       to="/kontakt"
       class="mt-8 inline-flex items-center gap-2 rounded-full bg-clay-500 px-6 py-3 text-sm font-semibold text-sand-50 shadow-tag transition-transform hover:-translate-y-0.5"
     >
-      Jetzt Termin anfragen
+      Kontaktiere uns
     </NuxtLink>
   </section>
 </template>

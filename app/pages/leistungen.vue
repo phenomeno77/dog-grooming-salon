@@ -27,20 +27,26 @@ const extras = [
 ]
 
 const wellness = [
-  { group: 'Lasertherapie', items: [
-    { label: 'Vitalpunkte', price: '€ 15,-- / Einheit' },
-    { label: 'Akupunkturtherapie mit Laser', price: '€ 25,-- / Einheit' }
-  ] },
-  { group: 'Tierbalance und Tierenergetik', items: [
-    { label: 'Cranio Sacral Therapie', price: '€ 48,-- / Einheit' },
-    { label: 'Heilströmen', price: '€ 48,-- / Einheit' },
-    { label: 'Chakrenarbeit', price: '€ 38,-- / Einheit' }
-  ] },
-  { group: 'Naturheilkunde', items: [
-    { label: 'Beratung Aroma- und Kräuteröle', price: 'auf Anfrage' },
-    { label: 'Vitalpilzberatung', price: 'auf Anfrage' },
-    { label: 'Heilpendeln', price: 'auf Anfrage' }
-  ] }
+  {
+    group: 'Lasertherapie', items: [
+      { label: 'Vitalpunkte', price: '€ 15,-- / Einheit' },
+      { label: 'Akupunkturtherapie mit Laser', price: '€ 25,-- / Einheit' }
+    ]
+  },
+  {
+    group: 'Tierbalance und Tierenergetik', items: [
+      { label: 'Cranio Sacral Therapie', price: '€ 48,-- / Einheit' },
+      { label: 'Heilströmen', price: '€ 48,-- / Einheit' },
+      { label: 'Chakrenarbeit', price: '€ 38,-- / Einheit' }
+    ]
+  },
+  {
+    group: 'Naturheilkunde', items: [
+      { label: 'Beratung Aroma- und Kräuteröle', price: 'auf Anfrage' },
+      { label: 'Vitalpilzberatung', price: 'auf Anfrage' },
+      { label: 'Heilpendeln', price: 'auf Anfrage' }
+    ]
+  }
 ]
 </script>
 
@@ -107,7 +113,8 @@ const wellness = [
           <div v-for="group in wellness" :key="group.group">
             <p class="eyebrow-tag text-clay-600">{{ group.group }}</p>
             <ul class="mt-3 space-y-3">
-              <li v-for="item in group.items" :key="item.label" class="flex items-baseline justify-between gap-3 border-b border-moss-200 pb-2 text-sm">
+              <li v-for="item in group.items" :key="item.label"
+                class="flex items-baseline justify-between gap-3 border-b border-moss-200 pb-2 text-sm">
                 <span class="text-ink-700">{{ item.label }}</span>
                 <span class="whitespace-nowrap font-tag text-clay-600">{{ item.price }}</span>
               </li>

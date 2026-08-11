@@ -16,12 +16,8 @@ const toneClasses: Record<string, string> = {
 </script>
 
 <template>
-  <div
-    :class="[ratio, toneClasses[tone]]"
-    class="flex w-full items-center justify-center overflow-hidden rounded-2xl"
-    role="img"
-    :aria-label="label"
-  >
+  <div :class="[ratio, toneClasses[tone]]" class="flex w-full items-center justify-center overflow-hidden rounded-2xl"
+    role="img" :aria-label="label">
     <div class="flex flex-col items-center gap-2 px-4 text-center opacity-80">
       <PawMark class="h-8 w-8" />
       <span class="font-tag text-[0.68rem] uppercase tracking-wider">{{ label }}</span>

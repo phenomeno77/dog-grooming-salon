@@ -16,7 +16,7 @@ const year = new Date().getFullYear()
           Dani und Petra kümmern sich um deinen Liebling — Pfotenstyle meets Fellness in Wattens, Tirol.
         </p>
         <div class="mt-5 flex items-center gap-3">
-          <SocialMedia/>
+          <SocialMedia />
         </div>
       </div>
 
@@ -38,14 +38,21 @@ const year = new Date().getFullYear()
       <div>
         <p class="eyebrow-tag text-gold-400">Rechtliches</p>
         <ul class="mt-3 space-y-2 text-sm text-moss-100/85">
-          <li><NuxtLink to="/impressum" class="hover:text-sand-50">Impressum</NuxtLink></li>
-          <li><NuxtLink to="/agb" class="hover:text-sand-50">AGB's</NuxtLink></li>
-          <li><NuxtLink to="/datenschutz" class="hover:text-sand-50">Datenschutz</NuxtLink></li>
+          <li>
+            <NuxtLink to="/impressum" class="hover:text-sand-50">Impressum</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/agb" class="hover:text-sand-50">AGB's</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/datenschutz" class="hover:text-sand-50">Datenschutz</NuxtLink>
+          </li>
         </ul>
       </div>
     </div>
 
-    <div class="border-t border-sand-100/10 px-5 py-5 text-center font-tag text-[0.7rem] uppercase tracking-wider text-moss-100/50 md:px-8">
+    <div
+      class="border-t border-sand-100/10 px-5 py-5 text-center font-tag text-[0.7rem] uppercase tracking-wider text-moss-100/50 md:px-8">
       © {{ year }} Pfotenstyle by Dani · Wattens, Tirol
     </div>
   </footer>
