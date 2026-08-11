@@ -103,7 +103,7 @@ const wellness = [
     </section>
 
     <!-- Tier-Balance -->
-    <section class="bg-moss-100/60">
+    <section id="tier-balance" class="scroll-mt-24 bg-moss-100/60">
       <div class="mx-auto max-w-5xl px-5 py-16 md:px-8">
         <h2 class="font-display text-2xl font-semibold text-moss-900 sm:text-3xl">
           Lasertherapie, Tierbalance &amp; Naturheilkunde

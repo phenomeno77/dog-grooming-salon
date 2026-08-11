@@ -20,11 +20,11 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: { lang: 'de' },
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: 'any' },
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-        { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/icon-192.png' },
-        { rel: 'icon', type: 'image/png', sizes: '512x512', href: '/icon-512.png' }
+        { rel: 'icon', type: 'image/svg+xml', href: '/pfotenstyle-favicon.svg' },
+        { rel: 'icon', type: 'image/x-icon', href: '/pfotenstyle-favicon', sizes: 'any' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/pfotenstyle-apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/pfotenstyle-icon-192.png' },
+        { rel: 'icon', type: 'image/png', sizes: '512x512', href: '/pfotenstyle-icon-512.png' }
       ]
     }
   },

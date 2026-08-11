@@ -92,7 +92,7 @@ const services = [
         <p>Ein kleiner Kerl der nicht stillhält braucht manchmal sogar länger, als eine gechillte Dogge.</p>
         <p>
           die aktuelle Preisliste findest du
-          <NuxtLink to="/leistungen" class="font-semibold text-clay-600 underline underline-offset-4">hier</NuxtLink>:
+          <NuxtLink to="/leistungen" class="font-semibold text-clay-600 underline underline-offset-4">hier</NuxtLink>.
         </p>
       </div>
 
@@ -139,21 +139,20 @@ const services = [
       </div>
     </section>
 
-    <!-- Tier-Balance -->
+    <!-- News Card -->
     <section class="bg-moss-100/60">
-      <div class="mx-auto max-w-4xl px-5 py-16 md:px-8">
-        <h2 class="font-display text-2xl font-semibold text-moss-900 sm:text-3xl">
-          Hier findest du viel Bla bla... oder News!?
+      <div class="mx-auto max-w-6xl px-5 py-16 md:px-8">
+        <p class="eyebrow-tag text-clay-600">Aktuelles</p>
+
+        <h2 class="mt-2 max-w-2xl font-display text-2xl font-semibold text-moss-900 sm:text-3xl">
+          Neuigkeiten aus dem Pfotenstyle
         </h2>
-        <p class="mt-4 font-semibold text-clay-600">neu seit 2024: Tier-Balance.</p>
-        <p class="mt-3 leading-relaxed text-ink-700">Wir bieten für deinen Liebling folgende Anwendungen an:</p>
-        <p class="mt-2 leading-relaxed text-ink-700">
-          Lasertherapie, Tierenergetik und Naturheilkunde... diese Anwendungen dienen zur Aktivierung der
-          Selbstheilungskräfte.
+
+        <p class="mt-4 max-w-2xl leading-relaxed text-ink-700">
+          Hier findest du aktuelle Infos, Neuigkeiten und was es bei uns gerade Neues gibt.
         </p>
-        <p class="mt-4 text-sm italic text-ink-700/70">
-          (sämtliche Anwendungen ersetzen nicht die Diagnose und Behandlung eines Veterinärmediziners)
-        </p>
+
+        <NewsCard />
       </div>
     </section>
 
