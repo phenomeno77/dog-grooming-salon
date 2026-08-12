@@ -1,13 +1,9 @@
 <script setup lang="ts">
+import { navLinks } from "./utils/navLinks";
+
 const open = ref(false);
 
-const links = [
-  { label: "Home", to: "/" },
-  { label: "Über uns", to: "/ueber-uns" },
-  { label: "Leistungen", to: "/leistungen" },
-  { label: "Öffnungszeiten", to: "/oeffnungszeiten" },
-  { label: "Kontakt", to: "/kontakt" },
-];
+const links = navLinks;
 
 const phone = "+49123456789";
 const phoneLabel = "01234 / 56 78 90";

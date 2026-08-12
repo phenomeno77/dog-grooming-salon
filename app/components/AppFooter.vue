@@ -1,15 +1,10 @@
 <script setup lang="ts">
 import SocialMedia from "./SocialMedia.vue";
+import { navLinks } from "./utils/navLinks.ts";
 
 const year = new Date().getFullYear();
 
-const explore = [
-  { label: "Home", to: "/" },
-  { label: "Über uns", to: "/ueber-uns" },
-  { label: "Leistungen", to: "/leistungen" },
-  { label: "Öffnungszeiten", to: "/oeffnungszeiten" },
-  { label: "Kontakt", to: "/kontakt" },
-];
+const explore = navLinks;
 
 const legal = [
   { label: "Impressum", to: "/impressum" },
