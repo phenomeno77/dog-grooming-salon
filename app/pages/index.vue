@@ -122,8 +122,8 @@ const reviews = [
           <h1
             class="mt-4 font-display text-4xl font-semibold leading-[1.05] text-sand-50 sm:text-5xl lg:text-6xl"
           >
-            Dein Hund geht hier<br class="hidden sm:block" />
-            als er selbst raus.
+            Fellpflege, nach der<br class="hidden sm:block" />
+            dein Hund gern wiederkommt.
           </h1>
           <p class="mt-6 max-w-md text-lg leading-relaxed text-moss-100/85">
             Fellpflege ohne Zeitdruck, in einem ruhigen Salon mitten in
