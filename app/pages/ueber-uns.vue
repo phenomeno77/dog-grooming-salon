@@ -9,6 +9,7 @@ useHead({
     },
   ],
 });
+  
 
 const facts = [
   { value: "2021", label: "eröffnet" },
