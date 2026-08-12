@@ -12,10 +12,10 @@ useHead({
 
 const highlights = [
   {
-    icon: "clock",
-    title: "Zeit statt Taktung",
-    body: "Ein Hund pro Termin. Kein Wartekäfig, keine Hektik – wir arbeiten im Tempo deines Vierbeiners.",
-  },
+  icon: "clock",
+  title: "Zeit statt Taktung",
+  body: "Braucht dein Hund zwischendurch eine Pause, bekommt er sie. Das kostet nicht extra und steht auf keiner Rechnung.",
+},
   {
     icon: "check",
     title: "Ehrliche Preise",
@@ -126,8 +126,7 @@ const reviews = [
             Hund gern wiederkommt.
           </h1>
           <p class="mt-6 max-w-md text-lg leading-relaxed text-moss-100/85">
-            Fellpflege ohne Zeitdruck, in einem ruhigen Salon mitten in
-            Musterstadt. Ein Hund pro Termin – und so viel Zeit, wie er braucht.
+            Kein Bellen nebenan, keine Wartebox. Ein ruhiger Salon mitten in Musterstadt, in dem sich jemand Zeit nimmt.
           </p>
 
           <div class="mt-9 flex flex-wrap gap-3">
@@ -322,11 +321,6 @@ const reviews = [
           >
             Zwei Paar Hände, die wissen, was sie tun.
           </h2>
-          <p class="mt-4 leading-relaxed text-ink-700">
-            Wir sind ein kleiner Salon und wollen das auch bleiben. So kennen
-            wir jeden Hund beim Namen – und merken uns, wer die Föhnstufe lieber
-            leise mag.
-          </p>
         </div>
 
         <!-- Members -->

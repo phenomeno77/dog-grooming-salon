@@ -9,6 +9,7 @@ useHead({
     },
   ],
 });
+  
 
 const facts = [
   { value: "2021", label: "eröffnet" },
@@ -94,13 +95,11 @@ const steps = [
           <h1
             class="mt-4 font-display text-4xl font-semibold leading-[1.05] text-sand-50 sm:text-5xl"
           >
-            Ein Hund. Ein Termin.<br class="hidden sm:block" />
+            Ein Hund. Zwei Hände.<br class="hidden sm:block" />
             Volle Aufmerksamkeit.
           </h1>
           <p class="mt-6 text-lg leading-relaxed text-moss-100/85">
-            Bei Momo gibt es seit 2021. In der Zeit haben wir vieles verändert –
-            aber nie die Regel, dass immer nur ein Hund gleichzeitig im Salon
-            ist. Alles andere richtet sich danach.
+          Seit 2021 pflegen wir Hunde in Musterstadt – jeden einzelnen so, als wäre er der einzige an diesem Tag.
           </p>
         </div>
 
