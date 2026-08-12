@@ -115,15 +115,15 @@ const reviews = [
     <!-- Hero -->
     <section class="relative overflow-hidden bg-moss-900">
       <div
-        class="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:grid-cols-[1.1fr_1fr] md:items-center md:px-8 md:py-28"
+        class="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:grid-cols-[1.1fr_1fr] md:items-center md:px-8 md:py-32"
       >
         <div>
           <p class="eyebrow-tag text-gold-400">Hundesalon · Musterstadt</p>
           <h1
             class="mt-4 font-display text-4xl font-semibold leading-[1.05] text-sand-50 sm:text-5xl lg:text-6xl"
           >
-            Fellpflege, nach der<br class="hidden sm:block" />
-            dein Hund gern wiederkommt.
+            Fellpflege, nach der dein<br class="hidden sm:block" />
+            Hund gern wiederkommt.
           </h1>
           <p class="mt-6 max-w-md text-lg leading-relaxed text-moss-100/85">
             Fellpflege ohne Zeitdruck, in einem ruhigen Salon mitten in
