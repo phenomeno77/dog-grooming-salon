@@ -1,11 +1,11 @@
 <script setup lang="ts">
 useHead({
-  title: "Fellwerk – Hundesalon in Musterstadt",
+  title: "Bei Momo – Hundesalon in Musterstadt",
   meta: [
     {
       name: "description",
       content:
-        "Hundesalon Fellwerk in Musterstadt: Fellpflege ohne Zeitdruck, Handarbeit für Halsbänder und Leinen sowie Wellness-Anwendungen für deinen Vierbeiner.",
+        "Hundesalon Bei Momo in Musterstadt: Fellpflege ohne Zeitdruck, Handarbeit für Halsbänder und Leinen sowie das Momo-Programm für deinen Vierbeiner.",
     },
   ],
 });
@@ -51,11 +51,11 @@ const services = [
     label: "Foto: Halsbänder aus Paracord",
   },
   {
-    title: "Wellness & Balance",
+    title: "Momo-Programm & Balance",
     body: "Für ältere Hunde, steife Gelenke und alle, denen der Winter in den Knochen sitzt. Ruhig, warm, ohne Leistungsdruck.",
     price: "ab € 45,–",
     priceNote: "pro Einheit",
-    label: "Foto: Hund bei Wellness-Anwendung",
+    label: "Foto: Hund bei Momo-Programm",
   },
 ];
 
@@ -68,8 +68,8 @@ const team = [
   },
   {
     name: "Beispiel Anna",
-    role: "Groomerin & Wellness",
-    body: "Kümmert sich um Pflege und Wellness-Anwendungen. Hat für jeden nervösen Hund einen langen Atem.",
+    role: "Groomerin & Momo-Programm",
+    body: "Kümmert sich um Pflege und das Momo-Programm. Hat für jeden nervösen Hund einen langen Atem.",
     label: "Foto: Beispiel Anna",
   },
 ];
@@ -80,7 +80,7 @@ const reviews = [
     breed: "Berner Sennenhund, 6 Jahre",
     paws: 5,
     quote:
-      "War skeptisch. Bin dann eingeschlafen. Habe verschlafen, dass ich fertig war. Zehn von zehn, würde wieder pennen.",
+      "War skeptisch. Bin dann eingeschlafen. Habe verschlafen, dass ich fertig war. Fünf von fünf, würde wieder pennen.",
     label: "Foto: Bruno",
   },
   {
@@ -153,7 +153,7 @@ const reviews = [
         </div>
 
         <ImgPlaceholder
-          label="Foto: Hund im Fellwerk Salon"
+          label="Foto: Hund im Bei Momo Salon"
           ratio="aspect-[4/5]"
           tone="clay"
         />

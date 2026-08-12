@@ -43,12 +43,12 @@ onUnmounted(() => {
       <NuxtLink
         to="/"
         class="flex items-center gap-2.5 text-moss-900"
-        aria-label="Fellwerk – zur Startseite"
+        aria-label="Bei Momo – zur Startseite"
       >
         <PawMark class="h-8 w-8 shrink-0 text-clay-600" />
         <span class="flex flex-col leading-none">
           <span class="font-display text-xl font-semibold tracking-tight"
-            >Fellwerk</span
+            >Bei Momo</span
           >
           <span class="eyebrow-tag mt-0.5 text-ink-700/60">Hundesalon</span>
         </span>
@@ -134,10 +134,6 @@ onUnmounted(() => {
           active-class="bg-moss-100 !text-moss-900 font-semibold"
         >
           {{ link.label }}
-          <FontAwesomeIcon
-            :icon="['fas', 'arrow-right']"
-            class="text-xs opacity-40"
-          />
         </NuxtLink>
 
         <NuxtLink

@@ -1,11 +1,11 @@
 <script setup lang="ts">
 useHead({
-  title: "Leistungen & Preise – Fellwerk Hundesalon Musterstadt",
+  title: "Leistungen & Preise – Bei Momo Hundesalon Musterstadt",
   meta: [
     {
       name: "description",
       content:
-        "Preise vom Hundesalon Fellwerk in Musterstadt: Komplettpflege nach Größe, Bad & Bürsten, Zusatzleistungen und Wellness-Anwendungen für ältere Hunde.",
+        "Preise vom Hundesalon Bei Momo in Musterstadt: Komplettpflege nach Größe, Bad & Bürsten, Zusatzleistungen und Momo-Programm für ältere Hunde.",
     },
   ],
 });
@@ -98,7 +98,7 @@ const extras = [
   },
 ];
 
-const wellness = [
+const momoProgram = [
   {
     title: "Massage",
     body: "Lockert verspannte Muskulatur nach Schonhaltung oder langen Pausen.",
@@ -263,10 +263,10 @@ const rules = [
       </div>
     </section>
 
-    <!-- Wellness -->
-    <section id="wellness" class="scroll-mt-24">
+    <!-- Momo-Programm -->
+    <section id="Momo-Programm" class="scroll-mt-24">
       <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-        <p class="eyebrow-tag text-clay-600">Wellness</p>
+        <p class="eyebrow-tag text-clay-600">Momo-Programm</p>
         <h2
           class="mt-3 max-w-2xl font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
         >
@@ -279,7 +279,7 @@ const rules = [
 
         <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <article
-            v-for="w in wellness"
+            v-for="w in momoProgram"
             :key="w.title"
             class="tag-card flex flex-col p-6 pl-8"
           >

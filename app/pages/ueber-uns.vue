@@ -1,17 +1,17 @@
 <script setup lang="ts">
 useHead({
-  title: "Über uns – Fellwerk Hundesalon Musterstadt",
+  title: "Über uns – Bei Momo Hundesalon Musterstadt",
   meta: [
     {
       name: "description",
       content:
-        "Wie wir arbeiten und wer dahinter steckt: das Team vom Hundesalon Fellwerk in Musterstadt – ein Hund pro Termin, ehrliche Preise, sanfte Produkte.",
+        "Wie wir arbeiten und wer dahinter steckt: das Team vom Hundesalon Bei Momo in Musterstadt – ein Hund pro Termin, ehrliche Preise, sanfte Produkte.",
     },
   ],
 });
 
 const facts = [
-  { value: "2008", label: "eröffnet" },
+  { value: "2021", label: "eröffnet" },
   { value: "1", label: "Hund pro Termin" },
   { value: "2", label: "Groomer im Team" },
   { value: "40 m²", label: "Salonfläche" },
@@ -44,23 +44,23 @@ const team = [
   {
     name: "Muster Max",
     role: "Inhaber & Groomer",
-    body: "Hat 2008 den Salon aufgemacht, nachdem er vorher acht Jahre in fremden Salons gearbeitet hat. Sein Spezialgebiet ist Handstripping – und Hunde, die anderswo als „schwierig“ gelten.",
+    body: "Hat 2021 den Salon aufgemacht, nachdem er vorher acht Jahre in fremden Salons gearbeitet hat. Sein Spezialgebiet ist Handstripping – und Hunde, die anderswo als „schwierig“ gelten.",
     detail: "Am liebsten: Terrier aller Art",
     label: "Foto: Muster Max",
   },
   {
     name: "Beispiel Anna",
-    role: "Groomerin & Wellness",
-    body: "Kam 2021 dazu und hat die Wellness-Anwendungen aufgebaut. Nimmt sich der nervösen Kandidaten an und schafft es meist, dass sie beim zweiten Termin von allein reinlaufen.",
+    role: "Groomerin & Momo-Programm",
+    body: "Kam 2023 dazu und hat das Momo-Programm aufgebaut. Nimmt sich der nervösen Kandidaten an und schafft es meist, dass sie beim zweiten Termin von allein reinlaufen.",
     detail: "Am liebsten: alte Herrschaften",
     label: "Foto: Beispiel Anna",
   },
   {
-    name: "Wurst",
+    name: "Momo",
     role: "Salonhund & Empfang",
-    body: "Dackel, neun Jahre, offiziell nicht angestellt. Begrüßt jeden Gast, prüft mitgebrachte Taschen auf Essbares und schläft den Rest des Tages im Fenster.",
+    body: "Vier Jahre alt, offiziell nicht angestellt. Begrüßt jeden Gast, prüft mitgebrachte Taschen auf Essbares und schläft den Rest des Tages im Fenster.",
     detail: "Am liebsten: Käse",
-    label: "Foto: Wurst der Salonhund",
+    label: "Foto: Momo, der Salonhund",
   },
 ];
 
@@ -98,7 +98,7 @@ const steps = [
             Volle Aufmerksamkeit.
           </h1>
           <p class="mt-6 text-lg leading-relaxed text-moss-100/85">
-            Fellwerk gibt es seit 2016. In der Zeit haben wir vieles verändert –
+            Bei Momo gibt es seit 2021. In der Zeit haben wir vieles verändert –
             aber nie die Regel, dass immer nur ein Hund gleichzeitig im Salon
             ist. Alles andere richtet sich danach.
           </p>
@@ -192,11 +192,12 @@ const steps = [
       <h2
         class="mt-3 max-w-2xl font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
       >
-        Zwei Menschen und ein Dackel.
+        Zwei Menschen und ein Maltipoo.
       </h2>
       <p class="mt-4 max-w-xl leading-relaxed text-ink-700">
-        Größer soll es nicht werden. So kennen wir jeden Hund beim Namen – und
-        wissen, wer den Föhn lieber leise mag.
+        Bei uns triffst du jedes Mal dieselben Gesichter. Das merkt man vor
+        allem den Hunden an, die beim zweiten Termin schon deutlich entspannter
+        sind.
       </p>
 
       <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

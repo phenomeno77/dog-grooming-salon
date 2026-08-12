@@ -1,20 +1,23 @@
 <script setup lang="ts">
+import type { FormattedClosure } from "~/composables/useOpeningHours";
+
+const { upcomingClosures } = useOpeningHours();
+
 interface NewsItem {
   date: string;
   title: string;
-  paragraphs: string[];
+  paragraphs?: string[];
+  upcomingClosures?: FormattedClosure[];
   href?: string;
   hrefLabel?: string;
 }
 
-// Add new announcements here, newest first. Each one renders as its own
-// card below — remove an entry (or empty the array) and it just disappears.
 const news: NewsItem[] = [
   {
     date: "Juli 2026",
-    title: "Terminkalender bis September ausgebucht",
+    title: "Wartezeit aktuell vier bis sechs Wochen",
     paragraphs: [
-      "Wir freuen uns riesig über den Zuspruch – gleichzeitig heißt das gerade: neue Anfragen finden frühestens im September einen Platz.",
+      "Wir freuen uns riesig über den Zuspruch – gleichzeitig heißt das gerade: neue Anfragen brauchen etwas Geduld, bis ein Platz frei wird.",
       "Für kurzfristige Absagen führen wir eine Warteliste. Schreib uns einfach, dann melden wir uns, sobald etwas frei wird.",
     ],
     href: "/kontakt",
@@ -22,20 +25,23 @@ const news: NewsItem[] = [
   },
   {
     date: "Mai 2026",
-    title: "Neu im Salon: Wellness für ältere Hunde",
+    title: "Neu im Salon: Momo-Programm für ältere Hunde",
     paragraphs: [
       "Massage, Wärmeanwendungen und sanfte Bewegungsübungen – gedacht für Hunde, denen das Aufstehen schwerer fällt als früher.",
       "Die Anwendungen ersetzen keinen Tierarztbesuch, sondern ergänzen ihn.",
     ],
-    href: "/leistungen#wellness",
+    href: "/leistungen#Momo-Programm",
     hrefLabel: "Mehr erfahren",
   },
   {
-    date: "März 2026",
-    title: "Betriebsurlaub im August",
+    date: "Schließzeiten",
+    title: "Wann der Salon dieses Jahr zu bleibt",
     paragraphs: [
-      "Vom 3. bis 17. August bleibt der Salon geschlossen. Termine davor und danach vergeben wir ab sofort.",
+      "Termine direkt davor und danach sind schnell weg – plan am besten etwas Vorlauf ein.",
     ],
+    upcomingClosures,
+    href: "/oeffnungszeiten",
+    hrefLabel: "Alle Öffnungszeiten",
   },
 ];
 </script>
@@ -62,6 +68,20 @@ const news: NewsItem[] = [
           {{ paragraph }}
         </p>
       </div>
+
+      <ul
+        v-if="item.upcomingClosures?.length"
+        class="mt-4 space-y-2 border-t border-sand-200 pt-4"
+      >
+        <li
+          v-for="c in item.upcomingClosures"
+          :key="c.period"
+          class="flex items-baseline justify-between gap-4 text-sm"
+        >
+          <span class="font-semibold text-moss-900">{{ c.period }}</span>
+          <span class="font-tag text-ink-700/60">{{ c.reason }}</span>
+        </li>
+      </ul>
 
       <NuxtLink
         v-if="item.href && item.hrefLabel"

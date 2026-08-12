@@ -17,11 +17,7 @@ const legal = [
   { label: "Datenschutz", to: "/datenschutz" },
 ];
 
-const hours = [
-  { day: "Mo – Fr", time: "09:00 – 18:00" },
-  { day: "Samstag", time: "09:00 – 13:00" },
-  { day: "Sonntag", time: "geschlossen" },
-];
+const { compactHours } = useOpeningHours();
 </script>
 
 <template>
@@ -35,7 +31,7 @@ const hours = [
           <PawMark class="h-7 w-7 shrink-0 text-gold-400" />
           <span class="flex flex-col leading-none">
             <span class="font-display text-xl font-semibold tracking-tight"
-              >Fellwerk</span
+              >Bei Momo</span
             >
             <span class="eyebrow-tag mt-0.5 text-moss-100/50">Hundesalon</span>
           </span>
@@ -100,26 +96,16 @@ const hours = [
 
         <ul class="mt-6 space-y-1.5 border-t border-sand-100/10 pt-5 text-sm">
           <li
-            v-for="item in hours"
+            v-for="item in compactHours"
             :key="item.day"
             class="flex justify-between gap-4"
           >
             <span class="text-moss-100/60">{{ item.day }}</span>
-            <span
-              :class="
-                item.time === 'geschlossen'
-                  ? 'text-moss-100/40'
-                  : 'text-moss-100/85'
-              "
-            >
-              {{ item.time }}
+            <span :class="item.time ? 'text-moss-100/85' : 'text-moss-100/40'">
+              {{ item.time ?? "geschlossen" }}
             </span>
           </li>
         </ul>
-
-        <p class="mt-4 text-xs leading-relaxed text-moss-100/60">
-          Termine nur nach Vereinbarung.
-        </p>
       </div>
     </div>
 
@@ -127,7 +113,7 @@ const hours = [
       <div
         class="mx-auto flex max-w-6xl flex-col items-center gap-2 px-5 py-6 text-center font-tag text-[0.7rem] uppercase tracking-wider text-moss-100/45 sm:flex-row sm:justify-between sm:text-left md:px-8"
       >
-        <p>© {{ year }} Fellwerk · Musterstadt</p>
+        <p>© {{ year }} Bei Momo · Musterstadt</p>
         <p>Alle Preise inkl. MwSt.</p>
       </div>
     </div>
