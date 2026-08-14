@@ -4,13 +4,13 @@ useSeoMeta({
     title ? `${title} — Bei Momo` : "Bei Momo – Hundesalon in Musterstadt",
   description:
     "Hundesalon Bei Momo in Musterstadt: Fellpflege ohne Zeitdruck, Handarbeit für Halsbänder und Leinen sowie das Momo-Programm für deinen Vierbeiner.",
-  ogImage: "/icon-192.png",
+  ogImage: "/favicon.png",
   ogImageAlt: "Bei Momo – Hundesalon in Musterstadt",
   twitterCard: "summary", // "summary" suits a square image; "summary_large_image" for the 1200×630
   twitterTitle: "Bei Momo – Hundesalon in Musterstadt",
   twitterDescription:
     "Fellpflege ohne Zeitdruck, handgemachte Halsbänder und Leinen sowie das Momo-Programm für deinen Vierbeiner.",
-  twitterImage: "/icon-512.png",
+  twitterImage: "/favicon.png",
 });
 
 useHead({
