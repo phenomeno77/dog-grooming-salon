@@ -5,7 +5,7 @@ useSeoMeta({
 
   description:
     "Hundesalon Bei Momo in Musterstadt: Fellpflege ohne Zeitdruck, Handarbeit für Halsbänder und Leinen sowie das Momo-Programm für deinen Vierbeiner.",
-  ogImage: "/og/og-default.jpg",
+  ogImage: "/icon-512.png",
   ogImageWidth: 1200,
   ogImageHeight: 630,
   ogImageAlt: "Bei Momo – Hundesalon in Musterstadt",
