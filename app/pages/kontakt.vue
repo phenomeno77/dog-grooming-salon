@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: "Kontakt – Bei Momo Hundesalon Musterstadt",
+  title: "Kontakt",
   meta: [
     {
       name: "description",

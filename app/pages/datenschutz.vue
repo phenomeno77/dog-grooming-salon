@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: "Datenschutz – Bei Momo Hundesalon Musterstadt",
+  title: "Datenschutz",
   meta: [
     {
       name: "description",

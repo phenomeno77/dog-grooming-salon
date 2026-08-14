@@ -5,7 +5,6 @@ import { navLinks } from "./utils/navLinks.ts";
 const year = new Date().getFullYear();
 
 const explore = navLinks;
-
 const legal = [
   { label: "Impressum", to: "/impressum" },
   { label: "AGB", to: "/agb" },

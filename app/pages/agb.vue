@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: "AGB – Bei Momo Hundesalon Musterstadt",
+  title: "AGB",
   meta: [
     {
       name: "description",

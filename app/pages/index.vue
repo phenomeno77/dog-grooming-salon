@@ -1,21 +1,28 @@
 <script setup lang="ts">
+useSeoMeta({
+  titleTemplate: (title) =>
+    title ? `${title} — Bei Momo` : "Bei Momo – Hundesalon in Musterstadt",
+
+  description:
+    "Hundesalon Bei Momo in Musterstadt: Fellpflege ohne Zeitdruck, Handarbeit für Halsbänder und Leinen sowie das Momo-Programm für deinen Vierbeiner.",
+  ogImage: "/icon=192.png",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: "InQu — anime character illustration",
+  twitterCard: "summary_large_image",
+});
+
 useHead({
-  title: "Bei Momo – Hundesalon in Musterstadt",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Hundesalon Bei Momo in Musterstadt: Fellpflege ohne Zeitdruck, Handarbeit für Halsbänder und Leinen sowie das Momo-Programm für deinen Vierbeiner.",
-    },
-  ],
+  htmlAttrs: { lang: "en" },
+  meta: [{ name: "color-scheme", content: "dark" }],
 });
 
 const highlights = [
   {
-  icon: "clock",
-  title: "Zeit statt Taktung",
-  body: "Braucht dein Hund zwischendurch eine Pause, bekommt er sie. Das kostet nicht extra und steht auf keiner Rechnung.",
-},
+    icon: "clock",
+    title: "Zeit statt Taktung",
+    body: "Braucht dein Hund zwischendurch eine Pause, bekommt er sie. Das kostet nicht extra und steht auf keiner Rechnung.",
+  },
   {
     icon: "check",
     title: "Ehrliche Preise",
@@ -126,7 +133,8 @@ const reviews = [
             Hund gern wiederkommt.
           </h1>
           <p class="mt-6 max-w-md text-lg leading-relaxed text-moss-100/85">
-            Kein Bellen nebenan, keine Wartebox. Ein ruhiger Salon mitten in Musterstadt, in dem sich jemand Zeit nimmt.
+            Kein Bellen nebenan, keine Wartebox. Ein ruhiger Salon mitten in
+            Musterstadt, in dem sich jemand Zeit nimmt.
           </p>
 
           <div class="mt-9 flex flex-wrap gap-3">

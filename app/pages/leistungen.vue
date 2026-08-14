@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: "Leistungen & Preise – Bei Momo Hundesalon Musterstadt",
+  title: "Leistungen & Preise",
   meta: [
     {
       name: "description",

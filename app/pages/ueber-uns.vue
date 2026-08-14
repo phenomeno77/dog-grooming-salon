@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: "Über uns – Bei Momo Hundesalon Musterstadt",
+  title: "Über uns",
   meta: [
     {
       name: "description",
@@ -9,7 +9,6 @@ useHead({
     },
   ],
 });
-  
 
 const facts = [
   { value: "2021", label: "eröffnet" },
@@ -99,7 +98,8 @@ const steps = [
             Volle Aufmerksamkeit.
           </h1>
           <p class="mt-6 text-lg leading-relaxed text-moss-100/85">
-          Seit 2021 pflegen wir Hunde in Musterstadt – jeden einzelnen so, als wäre er der einzige an diesem Tag.
+            Seit 2021 pflegen wir Hunde in Musterstadt – jeden einzelnen so, als
+            wäre er der einzige an diesem Tag.
           </p>
         </div>
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: "Öffnungszeiten – Bei Momo Hundesalon Musterstadt",
+  title: "Öffnungszeiten",
   meta: [
     {
       name: "description",

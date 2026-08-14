@@ -5,12 +5,25 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-01-01",
   devtools: { enabled: true },
 
-  modules: [],
+  modules: ["@nuxtjs/seo"],
 
   css: ["@/assets/css/main.css"],
 
   vite: {
     plugins: [tailwindcss()],
+  },
+
+  site: {
+    url: "https://manga-umber-rho.vercel.app/", // the real domain when you have it
+    name: "InQu",
+    description:
+      "Custom anime character illustrations, portraits, and reference sheets by InQu — commissions and the webtoon Nutcases.",
+    defaultLocale: "en",
+  },
+
+  // nuxt.config.ts
+  robots: {
+    blockAiBots: true, // blocks GPTBot, ClaudeBot, PerplexityBot, etc. — keeps Google/Bing
   },
 
   app: {
