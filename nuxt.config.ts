@@ -33,7 +33,7 @@ export default defineNuxtConfig({
       type: "LocalBusiness",
       name: "Bei Momo",
       url: "https://dog-grooming-salon-flame.vercel.app/",
-      logo: "https://dog-grooming-salon-flame.vercel.app//icon-512.png",
+      logo: "https://dog-grooming-salon-flame.vercel.app/icon-512.png",
       address: {
         streetAddress: "Musterstraße 1",
         addressLocality: "Musterstadt",
