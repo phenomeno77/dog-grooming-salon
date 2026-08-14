@@ -15,7 +15,7 @@ const { compactHours } = useOpeningHours();
 </script>
 
 <template>
-  <footer class="bg-moss-900 text-sand-100">
+  <footer class="bg-moss-900 text-sand-100 border-t border-sand-200">
     <div
       class="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-2 md:px-8 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]"
     >
