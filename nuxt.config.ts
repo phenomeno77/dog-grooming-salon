@@ -1,6 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2025-01-01",
   devtools: { enabled: true },
@@ -14,24 +13,48 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: "https://manga-umber-rho.vercel.app/", // the real domain when you have it
-    name: "InQu",
+    url: "https://dog-grooming-salon-flame.vercel.app/", // Bei Momo's real domain, no trailing slash
+    name: "Bei Momo",
     description:
-      "Custom anime character illustrations, portraits, and reference sheets by InQu — commissions and the webtoon Nutcases.",
-    defaultLocale: "en",
+      "Hundesalon Bei Momo in Musterstadt: Fellpflege ohne Zeitdruck, handgemachte Halsbänder und Leinen sowie das Momo-Programm für deinen Vierbeiner.",
+    defaultLocale: "de",
   },
 
-  // nuxt.config.ts
-  robots: {
-    blockAiBots: true, // blocks GPTBot, ClaudeBot, PerplexityBot, etc. — keeps Google/Bing
+  sitemap: {
+    exclude: ["/impressum", "/datenschutz", "/agb"],
+  },
+
+  // no dynamic OG images — using a static share card
+  ogImage: { enabled: false },
+
+  //TODO: add real data
+  schemaOrg: {
+    identity: {
+      type: "LocalBusiness",
+      name: "Bei Momo",
+      url: "https://dog-grooming-salon-flame.vercel.app/",
+      logo: "https://dog-grooming-salon-flame.vercel.app//icon-512.png",
+      address: {
+        streetAddress: "Musterstraße 1",
+        addressLocality: "Musterstadt",
+        postalCode: "12345",
+        addressCountry: "DE",
+      },
+      telephone: "+49 ...",
+      // openingHours, priceRange, geo can be added too
+    },
   },
 
   app: {
     head: {
-      htmlAttrs: { lang: "de" },
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-        { rel: "icon", type: "image/x-icon", href: "/favicon", sizes: "any" },
+        {
+          rel: "icon",
+          type: "image/x-icon",
+          href: "/favicon.ico",
+          sizes: "any",
+        },
         {
           rel: "apple-touch-icon",
           sizes: "180x180",
