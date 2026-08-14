@@ -1,13 +1,15 @@
 <script setup lang="ts">
+useSeoMeta({
+  titleTemplate: (title) =>
+    title ? `${title} — Bei Momo` : "Bei Momo – Hundesalon in Musterstadt",
+  description:
+    "Hundesalon Bei Momo in Musterstadt: Fellpflege ohne Zeitdruck, Handarbeit für Halsbänder und Leinen sowie das Momo-Programm für deinen Vierbeiner.",
+  ogImage: "/icon-512.png",
+  ogImageAlt: "Bei Momo – Hundesalon in Musterstadt",
+});
+
 useHead({
-  title: "Bei Momo – Hundesalon in Musterstadt",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Hundesalon Bei Momo in Musterstadt: Fellpflege ohne Zeitdruck, Handarbeit für Halsbänder und Leinen sowie das Momo-Programm für deinen Vierbeiner.",
-    },
-  ],
+  htmlAttrs: { lang: "de" },
 });
 
 const highlights = [

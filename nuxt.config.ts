@@ -1,16 +1,46 @@
 import tailwindcss from "@tailwindcss/vite";
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2025-01-01",
   devtools: { enabled: true },
 
-  modules: [],
+  modules: ["@nuxtjs/seo"],
 
   css: ["@/assets/css/main.css"],
 
   vite: {
     plugins: [tailwindcss()],
+  },
+
+  site: {
+    url: "https://dog-grooming-salon-flame.vercel.app", // no trailing slash; swap for real domain
+    name: "Bei Momo",
+    description:
+      "Hundesalon Bei Momo in Musterstadt: Fellpflege ohne Zeitdruck, handgemachte Halsbänder und Leinen sowie das Momo-Programm für deinen Vierbeiner.",
+    defaultLocale: "de",
+  },
+
+  sitemap: {
+    exclude: ["/impressum", "/datenschutz", "/agb"],
+  },
+
+  ogImage: { enabled: false },
+
+  //TODO: add real data (address, phone, country — check AT vs DE)
+  schemaOrg: {
+    identity: {
+      type: "LocalBusiness",
+      name: "Bei Momo",
+      url: "https://dog-grooming-salon-flame.vercel.app",
+      logo: "https://dog-grooming-salon-flame.vercel.app/icon-512.png",
+      address: {
+        streetAddress: "Musterstraße 1",
+        addressLocality: "Musterstadt",
+        postalCode: "12345",
+        addressCountry: "AT",
+      },
+      telephone: "+43 ...",
+    },
   },
 
   app: {
