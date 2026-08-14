@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: "https://dog-grooming-salon-flame.vercel.app/", // Bei Momo's real domain, no trailing slash
+    url: "https://dog-grooming-salon-flame.vercel.app", // no trailing slash; swap for real domain
     name: "Bei Momo",
     description:
       "Hundesalon Bei Momo in Musterstadt: Fellpflege ohne Zeitdruck, handgemachte Halsbänder und Leinen sowie das Momo-Programm für deinen Vierbeiner.",
@@ -24,10 +24,9 @@ export default defineNuxtConfig({
     exclude: ["/impressum", "/datenschutz", "/agb"],
   },
 
-  // no dynamic OG images — using a static share card
   ogImage: { enabled: false },
 
-  //TODO: add real data
+  //TODO: add real data (address, phone, country — check AT vs DE)
   schemaOrg: {
     identity: {
       type: "LocalBusiness",
@@ -38,10 +37,9 @@ export default defineNuxtConfig({
         streetAddress: "Musterstraße 1",
         addressLocality: "Musterstadt",
         postalCode: "12345",
-        addressCountry: "DE",
+        addressCountry: "AT",
       },
-      telephone: "+49 ...",
-      // openingHours, priceRange, geo can be added too
+      telephone: "+43 ...",
     },
   },
 
@@ -50,7 +48,12 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: "de" },
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-        { rel: "icon", type: "image/x-icon", href: "/favicon", sizes: "any" },
+        {
+          rel: "icon",
+          type: "image/x-icon",
+          href: "/favicon.ico",
+          sizes: "any",
+        },
         {
           rel: "apple-touch-icon",
           sizes: "180x180",
