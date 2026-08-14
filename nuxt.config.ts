@@ -24,8 +24,6 @@ export default defineNuxtConfig({
     exclude: ["/impressum", "/datenschutz", "/agb"],
   },
 
-  ogImage: { enabled: false },
-
   //TODO: add real data (address, phone, country — check AT vs DE)
   schemaOrg: {
     identity: {
