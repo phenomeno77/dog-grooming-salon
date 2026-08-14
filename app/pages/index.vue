@@ -262,12 +262,12 @@ const reviews = [
               />
             </div>
 
-            <figcaption class="min-w-0">
+            <div class="min-w-0">
               <p class="font-display text-lg font-semibold text-moss-900">
                 {{ review.name }}
               </p>
               <p class="text-xs text-ink-700/70">{{ review.breed }}</p>
-            </figcaption>
+            </div>
           </div>
 
           <div
