@@ -42,6 +42,7 @@ const services = [
     price: "ab € 65,–",
     priceNote: "je nach Größe & Fell",
     label: "Foto: Hund beim Fellschnitt",
+    imageSrc: "/images/homepage/fellschnit.jpg",
   },
   {
     title: "Wäsche & Bürsten",
@@ -49,6 +50,7 @@ const services = [
     price: "ab € 35,–",
     priceNote: "ca. 45 Minuten",
     label: "Foto: Hund in der Badewanne",
+    imageSrc: "/images/homepage/badewanne.jpg",
   },
   {
     title: "Handarbeit & Zubehör",
@@ -56,6 +58,7 @@ const services = [
     price: "ab € 24,–",
     priceNote: "Einzelstücke",
     label: "Foto: Halsbänder aus Paracord",
+    imageSrc: "/images/homepage/paracord.jpg",
   },
   {
     title: "Momo-Programm & Balance",
@@ -63,21 +66,24 @@ const services = [
     price: "ab € 45,–",
     priceNote: "pro Einheit",
     label: "Foto: Hund bei Momo-Programm",
+    imageSrc: "/images/homepage/momo-program.jpg",
   },
 ];
 
 const team = [
   {
-    name: "Muster Max",
-    role: "Inhaber & Groomer",
+    name: "Musterfrau",
+    role: "Inhaberin & Groomer",
     body: "Gelernter Hundefriseur, seit zwölf Jahren im Beruf. Spezialist für Handstripping und schwierige Kandidaten.",
-    label: "Foto: Muster Max",
+    label: "Foto: Musterfrau",
+    imageSrc: "/images/ueber-uns/musterfrau.jpg",
   },
   {
-    name: "Beispiel Anna",
+    name: "Muster Anna",
     role: "Groomerin & Momo-Programm",
     body: "Kümmert sich um Pflege und das Momo-Programm. Hat für jeden nervösen Hund einen langen Atem.",
-    label: "Foto: Beispiel Anna",
+    label: "Foto: Muster Anna",
+    imageSrc: "/images/ueber-uns/anna.jpg",
   },
 ];
 
@@ -89,6 +95,7 @@ const reviews = [
     quote:
       "War skeptisch. Bin dann eingeschlafen. Habe verschlafen, dass ich fertig war. Fünf von fünf, würde wieder pennen.",
     label: "Foto: Bruno",
+    imageSrc: "/images/bewertungen/bruno.jpg",
   },
   {
     name: "Kleopatra",
@@ -97,6 +104,7 @@ const reviews = [
     quote:
       "Endlich jemand, der versteht, dass ich links anders aussehen will als rechts. Frauchen versteht das bis heute nicht.",
     label: "Foto: Kleopatra",
+    imageSrc: "/images/bewertungen/kleopatra.jpg",
   },
   {
     name: "Rocky",
@@ -105,6 +113,7 @@ const reviews = [
     quote:
       "Ein Punkt Abzug, weil das Wasser nass war. Ansonsten: viele Streicheleinheiten, gutes Personal, komme wieder.",
     label: "Foto: Rocky",
+    imageSrc: "/images/bewertungen/rocky.jpg",
   },
   {
     name: "Frau Schneider",
@@ -113,6 +122,7 @@ const reviews = [
     quote:
       "In meinem Alter geht man nicht mehr überall hin. Hier gehe ich hin. Die haben eine warme Decke und Geduld.",
     label: "Foto: Frau Schneider",
+    imageSrc: "/images/bewertungen/frau-schneider.jpg",
   },
 ];
 </script>
@@ -162,7 +172,9 @@ const reviews = [
         <ImgPlaceholder
           label="Foto: Hund im Bei Momo Salon"
           ratio="aspect-[4/5]"
-          tone="clay"
+          src="/images/homepage/hero.jpg"
+          alt="Hund beim Fellschnitt"
+          tone="sand"
         />
       </div>
     </section>
@@ -213,6 +225,8 @@ const reviews = [
               :label="service.label"
               ratio="aspect-[4/3]"
               tone="sand"
+              :src="service.imageSrc"
+              :alt="service.label"
             />
             <h3 class="mt-5 font-display text-xl font-semibold text-moss-900">
               {{ service.title }}
@@ -264,6 +278,7 @@ const reviews = [
                 :label="review.label"
                 ratio="aspect-square"
                 tone="moss"
+                :src="review.imageSrc"
               />
             </div>
 
@@ -344,6 +359,7 @@ const reviews = [
               :label="member.label"
               ratio="aspect-square"
               tone="moss"
+              :src="member.imageSrc"
             />
             <h3 class="mt-5 font-display text-lg font-semibold text-moss-900">
               {{ member.name }}

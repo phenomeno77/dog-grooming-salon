@@ -4,13 +4,15 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-01-01",
   devtools: { enabled: true },
 
-  modules: ["@nuxtjs/seo"],
+  modules: ["@nuxtjs/seo", "@nuxt/image"],
 
   css: ["@/assets/css/main.css"],
 
   vite: {
     plugins: [tailwindcss()],
   },
+
+  //TODO: add real data (address, phone, country — check AT vs DE)
 
   site: {
     url: "https://dog-grooming-salon-flame.vercel.app", // no trailing slash; swap for real domain
@@ -26,13 +28,13 @@ export default defineNuxtConfig({
 
   ogImage: { enabled: false },
 
-  //TODO: add real data (address, phone, country — check AT vs DE)
   schemaOrg: {
     identity: {
-      type: "LocalBusiness",
+      type: "PetGroomer", // more specific sub-type of LocalBusiness — tells Google exactly what kind of business
       name: "Bei Momo",
       url: "https://dog-grooming-salon-flame.vercel.app",
       logo: "https://dog-grooming-salon-flame.vercel.app/icon-512.png",
+      image: "https://dog-grooming-salon-flame.vercel.app/icon-512.png",
       address: {
         streetAddress: "Musterstraße 1",
         addressLocality: "Musterstadt",
@@ -40,6 +42,14 @@ export default defineNuxtConfig({
         addressCountry: "AT",
       },
       telephone: "+43 ...",
+      priceRange: "€€",
+      openingHoursSpecification: [
+        {
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "09:00",
+          closes: "18:00",
+        },
+      ],
     },
   },
 

@@ -42,11 +42,12 @@ const principles = [
 
 const team = [
   {
-    name: "Muster Max",
-    role: "Inhaber & Groomer",
+    name: "Musterfrau",
+    role: "Inhaberin & Groomer",
     body: "Hat 2021 den Salon aufgemacht, nachdem er vorher acht Jahre in fremden Salons gearbeitet hat. Sein Spezialgebiet ist Handstripping – und Hunde, die anderswo als „schwierig“ gelten.",
     detail: "Am liebsten: Terrier aller Art",
-    label: "Foto: Muster Max",
+    label: "Foto: Musterfrau",
+    imageSrc: "/images/ueber-uns/musterfrau.jpg",
   },
   {
     name: "Beispiel Anna",
@@ -54,6 +55,7 @@ const team = [
     body: "Kam 2023 dazu und hat das Momo-Programm aufgebaut. Nimmt sich der nervösen Kandidaten an und schafft es meist, dass sie beim zweiten Termin von allein reinlaufen.",
     detail: "Am liebsten: alte Herrschaften",
     label: "Foto: Beispiel Anna",
+    imageSrc: "/images/ueber-uns/anna.jpg",
   },
   {
     name: "Momo",
@@ -61,6 +63,7 @@ const team = [
     body: "Vier Jahre alt, offiziell nicht angestellt. Begrüßt jeden Gast, prüft mitgebrachte Taschen auf Essbares und schläft den Rest des Tages im Fenster.",
     detail: "Am liebsten: Käse",
     label: "Foto: Momo, der Salonhund",
+    imageSrc: "/images/ueber-uns/momo.jpg",
   },
 ];
 
@@ -123,6 +126,7 @@ const steps = [
           label="Foto: Der Salon von innen"
           ratio="aspect-[4/3]"
           tone="clay"
+          src="/images/ueber-uns/hero.jpg"
         />
 
         <div>
@@ -209,6 +213,7 @@ const steps = [
             :label="member.label"
             ratio="aspect-[4/5]"
             tone="moss"
+            :src="member.imageSrc"
           />
           <h3 class="mt-5 font-display text-xl font-semibold text-moss-900">
             {{ member.name }}
