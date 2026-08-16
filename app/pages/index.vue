@@ -61,7 +61,7 @@ const services = [
     imageSrc: "/images/homepage/paracord.jpg",
   },
   {
-    title: "Momo-Programm & Balance",
+    title: "Momo-Programm",
     body: "Für ältere Hunde, steife Gelenke und alle, denen der Winter in den Knochen sitzt. Ruhig, warm, ohne Leistungsdruck.",
     price: "ab € 45,–",
     priceNote: "pro Einheit",
