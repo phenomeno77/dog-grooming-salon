@@ -105,6 +105,7 @@ const momoProgram = [
     price: "€ 38,–",
     note: "30 Minuten",
     label: "Foto: Massage",
+    imageSrc: "/images/leistungen/massage.jpg",
   },
   {
     title: "Wärmeanwendung",
@@ -112,6 +113,7 @@ const momoProgram = [
     price: "€ 30,–",
     note: "25 Minuten",
     label: "Foto: Wärmeanwendung",
+    imageSrc: "/images/leistungen/waermeanwendung.jpg",
   },
   {
     title: "Bewegungsübungen",
@@ -119,6 +121,7 @@ const momoProgram = [
     price: "€ 42,–",
     note: "40 Minuten",
     label: "Foto: Bewegungsübungen",
+    imageSrc: "/images/leistungen/bewegung.jpg",
   },
 ];
 
@@ -287,6 +290,7 @@ const rules = [
               :label="w.label"
               ratio="aspect-[16/10]"
               tone="moss"
+              :src="w.imageSrc"
             />
             <h3 class="mt-5 font-display text-xl font-semibold text-moss-900">
               {{ w.title }}
