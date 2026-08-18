@@ -130,12 +130,11 @@ const steps = [
         />
 
         <div>
-          <p class="eyebrow-tag text-clay-600">Wie es dazu kam</p>
-          <h2
-            class="mt-3 font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
-          >
-            Angefangen hat alles mit einem miserablen Haarschnitt.
-          </h2>
+          <UiSectionTitle
+            eyebrow="Wie es dazu kam"
+            title="Angefangen hat alles mit einem miserablen Haarschnitt."
+          />
+
           <div class="mt-5 space-y-4 leading-relaxed text-ink-700">
             <p>
               Genauer gesagt mit dem eines Bearded Collie namens Sepp, der aus
@@ -161,12 +160,10 @@ const steps = [
     <!-- Prinzipien -->
     <section class="bg-sand-100">
       <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-        <p class="eyebrow-tag text-clay-600">Unsere Haltung</p>
-        <h2
-          class="mt-3 max-w-2xl font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
-        >
-          Vier Dinge, bei denen wir nicht flexibel sind.
-        </h2>
+        <UiSectionTitle
+          eyebrow="Unsere Haltung"
+          title="Vier Dinge, bei denen wir nicht flexibel sind."
+        />
 
         <div class="mt-12 grid gap-6 sm:grid-cols-2">
           <div
@@ -191,17 +188,13 @@ const steps = [
 
     <!-- Team -->
     <section class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-      <p class="eyebrow-tag text-clay-600">Das Team</p>
-      <h2
-        class="mt-3 max-w-2xl font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
-      >
-        Zwei Menschen und ein Maltipoo.
-      </h2>
-      <p class="mt-4 max-w-xl leading-relaxed text-ink-700">
-        Bei uns triffst du jedes Mal dieselben Gesichter. Das merkt man vor
+      <UiSectionTitle
+        eyebrow="Das Team"
+        title="Zwei Menschen und ein Maltipoo."
+        description="Bei uns triffst du jedes Mal dieselben Gesichter. Das merkt man vor
         allem den Hunden an, die beim zweiten Termin schon deutlich entspannter
-        sind.
-      </p>
+        sind."
+      />
 
       <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <article
@@ -234,16 +227,12 @@ const steps = [
     <!-- Ablauf -->
     <section class="bg-sand-100">
       <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-        <p class="eyebrow-tag text-clay-600">Ablauf</p>
-        <h2
-          class="mt-3 max-w-2xl font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
-        >
-          Was beim ersten Termin passiert.
-        </h2>
-        <p class="mt-4 max-w-xl leading-relaxed text-ink-700">
-          Plan etwa zwei Stunden ein. Wenn dein Hund unruhig wird, machen wir
-          eine Pause – das gehört dazu und kostet nicht extra.
-        </p>
+        <UiSectionTitle
+          eyebrow="Ablauf"
+          title="Was beim ersten Termin passiert."
+          description="Plan etwa zwei Stunden ein. Wenn dein Hund unruhig wird, machen wir
+          eine Pause – das gehört dazu und kostet nicht extra."
+        />
 
         <ol class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <li
@@ -268,33 +257,26 @@ const steps = [
     </section>
 
     <!-- CTA -->
-    <section class="bg-moss-900">
-      <div class="mx-auto max-w-3xl px-5 py-16 text-center md:px-8 md:py-20">
-        <h2
-          class="font-display text-3xl font-semibold text-sand-50 sm:text-4xl"
+    <UiCtaSection
+      title="Klingt nach eurem Salon?"
+      description="Dann komm vorbei – oder schreib uns vorher kurz, wenn dein Hund
+          Besonderheiten mitbringt, auf die wir uns einstellen sollen."
+    >
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <NuxtLink
+          to="/kontakt"
+          class="inline-flex items-center gap-2 rounded-full bg-clay-500 px-6 py-3.5 text-sm font-semibold text-sand-50 shadow-tag transition-colors duration-200 hover:bg-clay-600"
         >
-          Klingt nach eurem Salon?
-        </h2>
-        <p class="mx-auto mt-4 max-w-md leading-relaxed text-moss-100/85">
-          Dann komm vorbei – oder schreib uns vorher kurz, wenn dein Hund
-          Besonderheiten mitbringt, auf die wir uns einstellen sollen.
-        </p>
-        <div class="mt-8 flex flex-wrap justify-center gap-3">
-          <NuxtLink
-            to="/kontakt"
-            class="inline-flex items-center gap-2 rounded-full bg-clay-500 px-6 py-3.5 text-sm font-semibold text-sand-50 shadow-tag transition-colors duration-200 hover:bg-clay-600"
-          >
-            <FontAwesomeIcon :icon="['fas', 'envelope']" />
-            Termin anfragen
-          </NuxtLink>
-          <NuxtLink
-            to="/leistungen"
-            class="rounded-full border border-sand-100/30 px-6 py-3.5 text-sm font-semibold text-sand-50 transition-colors duration-200 hover:bg-sand-100/10"
-          >
-            Preise ansehen
-          </NuxtLink>
-        </div>
+          <FontAwesomeIcon :icon="['fas', 'envelope']" />
+          Termin anfragen
+        </NuxtLink>
+        <NuxtLink
+          to="/leistungen"
+          class="rounded-full border border-sand-100/30 px-6 py-3.5 text-sm font-semibold text-sand-50 transition-colors duration-200 hover:bg-sand-100/10"
+        >
+          Preise ansehen
+        </NuxtLink>
       </div>
-    </section>
+    </UiCtaSection>
   </div>
 </template>

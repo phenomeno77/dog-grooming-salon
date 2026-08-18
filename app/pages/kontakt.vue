@@ -105,12 +105,10 @@ const faqs = [
 
     <!-- Kanäle -->
     <section class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-      <p class="eyebrow-tag text-clay-600">Direkt erreichen</p>
-      <h2
-        class="mt-3 max-w-2xl font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
-      >
-        Such dir aus, was dir lieber ist.
-      </h2>
+      <UiSectionTitle
+        eyebrow="Direkt erreichen"
+        title="Such dir aus, was dir lieber ist."
+      />
 
       <div class="mt-12 grid gap-6 sm:grid-cols-3">
         <a
@@ -151,16 +149,12 @@ const faqs = [
         <div class="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-start">
           <!-- Formular -->
           <div>
-            <p class="eyebrow-tag text-clay-600">Anfrage</p>
-            <h2
-              class="mt-3 font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
-            >
-              Schreib uns kurz.
-            </h2>
-            <p class="mt-4 leading-relaxed text-ink-700">
-              Je mehr wir vorher wissen, desto besser können wir den Termin
-              planen. Rasse und letzter Groomer-Besuch helfen uns am meisten.
-            </p>
+            <UiSectionTitle
+              eyebrow="Anfrage"
+              title="Schreib uns kurz."
+              description="Je mehr wir vorher wissen, desto besser können wir den Termin
+              planen. Rasse und letzter Groomer-Besuch helfen uns am meisten."
+            />
 
             <form class="mt-8 space-y-5" @submit.prevent="submitForm">
               <div class="grid gap-5 sm:grid-cols-2">
@@ -311,12 +305,10 @@ const faqs = [
 
     <!-- FAQ -->
     <section class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-      <p class="eyebrow-tag text-clay-600">Häufige Fragen</p>
-      <h2
-        class="mt-3 max-w-2xl font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
-      >
-        Das werden wir oft gefragt.
-      </h2>
+      <UiSectionTitle
+        eyebrow="Häufige Fragen"
+        title="Das werden wir oft gefragt."
+      />
 
       <div class="mt-12 grid gap-6 sm:grid-cols-2">
         <div v-for="faq in faqs" :key="faq.q" class="tag-card p-6 pl-8">

@@ -5,4 +5,5 @@ export const navLinks = [
   { label: "Leistungen", to: "/leistungen" },
   { label: "Öffnungszeiten", to: "/oeffnungszeiten" },
   { label: "Kontakt", to: "/kontakt" },
+  { label: "v2", to: "/v2" },
 ] as const;

@@ -15,6 +15,7 @@ useSeoMeta({
 
 useHead({
   htmlAttrs: { lang: "de" },
+  bodyAttrs: { class: "theme-violet" },
 });
 
 const highlights = [

@@ -71,12 +71,7 @@ const notes = [
 
     <!-- Zeiten -->
     <section class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-      <p class="eyebrow-tag text-clay-600">Die Woche</p>
-      <h2
-        class="mt-3 font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
-      >
-        Wann wir da sind.
-      </h2>
+      <UiSectionTitle eyebrow="Die Woche" title="Wann wir da sind." />
 
       <div class="mt-12 grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-start">
         <div>
@@ -147,18 +142,14 @@ const notes = [
       <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <div class="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
-            <p class="eyebrow-tag text-clay-600">Schließzeiten</p>
-            <h2
-              class="mt-3 font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
-            >
-              Auch wir brauchen mal frei.
-            </h2>
-            <p class="mt-4 leading-relaxed text-ink-700">
-              Urlaub, Fortbildungen, Feiertage – ein paar Mal im Jahr bleibt der
+            <UiSectionTitle
+              eyebrow="Schließzeiten"
+              title="Auch wir brauchen mal frei."
+              description="   Urlaub, Fortbildungen, Feiertage – ein paar Mal im Jahr bleibt der
               Salon zu. Wir kündigen das rechtzeitig an, aber die Termine
               drumherum sind erfahrungsgemäß schnell weg. Wer einen festen
-              Rhythmus hat, bucht am besten gleich den nächsten mit.
-            </p>
+              Rhythmus hat, bucht am besten gleich den nächsten mit."
+            />
           </div>
 
           <ul class="space-y-4">
@@ -178,25 +169,12 @@ const notes = [
     </section>
 
     <!-- CTA -->
-    <section class="bg-moss-900">
-      <div class="mx-auto max-w-3xl px-5 py-16 text-center md:px-8 md:py-20">
-        <h2
-          class="font-display text-3xl font-semibold text-sand-50 sm:text-4xl"
-        >
-          Passt keine Zeit?
-        </h2>
-        <p class="mx-auto mt-4 max-w-md leading-relaxed text-moss-100/85">
-          Sag uns, wann es bei dir geht – manchmal lässt sich etwas schieben,
-          und für kurzfristige Absagen führen wir eine Warteliste.
-        </p>
-        <NuxtLink
-          to="/kontakt"
-          class="mt-8 inline-flex items-center gap-2 rounded-full bg-clay-500 px-7 py-3.5 text-sm font-semibold text-sand-50 shadow-tag transition-colors duration-200 hover:bg-clay-600"
-        >
-          <FontAwesomeIcon :icon="['fas', 'envelope']" />
-          Auf die Warteliste
-        </NuxtLink>
-      </div>
-    </section>
+    <UiCtaSection
+      title="Passt keine Zeit?"
+      description=" Sag uns, wann es bei dir geht – manchmal lässt sich etwas schieben,
+          und für kurzfristige Absagen führen wir eine Warteliste."
+      button-label="Auf die Warteliste"
+      button-to="/kontakt"
+    />
   </div>
 </template>

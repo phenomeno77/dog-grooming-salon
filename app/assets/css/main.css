@@ -35,6 +35,37 @@
   --shadow-tag: 0 6px 16px -8px rgba(32, 43, 29, 0.35);
 }
 
+.theme-violet {
+  /* moss → deep indigo */
+  --color-moss-900: #241938;
+  --color-moss-800: #33265A;
+  --color-moss-700: #453579;
+  --color-moss-600: #5B4BE0;
+  --color-moss-500: #7C6FE8;
+  --color-moss-100: #E5DFF6;
+
+  /* sand → lavender-white */
+  --color-sand-50:  #FBF9FE;
+  --color-sand-100: #F4EFFB;
+  --color-sand-200: #E7DEF3;
+
+  /* clay → violet */
+  --color-clay-600: #5B4BE0;
+  --color-clay-500: #7C5CFC;
+  --color-clay-400: #9D84FD;
+
+  /* gold → pink */
+  --color-gold-500: #DB4F92;
+  --color-gold-400: #ED74AC;
+
+  /* ink → deep indigo text */
+  --color-ink-900: #2B1E44;
+  --color-ink-700: #4A3D63;
+
+  /* retinted shadow */
+  --shadow-tag: 0 6px 16px -8px rgba(36, 25, 56, 0.35);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

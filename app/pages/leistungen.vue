@@ -170,16 +170,12 @@ const rules = [
     <section class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
       <div class="grid gap-12 lg:grid-cols-[1fr_1.6fr]">
         <div>
-          <p class="eyebrow-tag text-clay-600">Komplettpflege</p>
-          <h2
-            class="mt-3 font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
-          >
-            Der große Termin.
-          </h2>
-          <p class="mt-4 leading-relaxed text-ink-700">
-            Alles, was dazugehört, in einem Durchgang. Die Zeitangaben sind grob
-            – wenn dein Hund eine Pause braucht, nimmt er sie.
-          </p>
+          <UiSectionTitle
+            eyebrow="Komplettpflege"
+            title="Der große Termin."
+            description="Alles, was dazugehört, in einem Durchgang. Die Zeitangaben sind grob
+            – wenn dein Hund eine Pause braucht, nimmt er sie."
+          />
 
           <ul class="mt-6 space-y-2.5">
             <li
@@ -237,12 +233,10 @@ const rules = [
     <!-- Zusatzleistungen -->
     <section class="bg-sand-100">
       <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-        <p class="eyebrow-tag text-clay-600">Einzelleistungen</p>
-        <h2
-          class="mt-3 max-w-2xl font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
-        >
-          Muss nicht immer das ganze Programm sein.
-        </h2>
+        <UiSectionTitle
+          eyebrow="Einzelleistungen"
+          title="Muss nicht immer das ganze Programm sein."
+        />
 
         <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <div
@@ -269,16 +263,12 @@ const rules = [
     <!-- Momo-Programm -->
     <section id="Momo-Programm" class="scroll-mt-24">
       <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-        <p class="eyebrow-tag text-clay-600">Momo-Programm</p>
-        <h2
-          class="mt-3 max-w-2xl font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
-        >
-          Für Hunde, denen das Aufstehen schwerer fällt.
-        </h2>
-        <p class="mt-4 max-w-xl leading-relaxed text-ink-700">
-          Gedacht als Ergänzung für ältere oder steife Hunde – meist im
-          Anschluss an einen Pflegetermin, wenn das Fell ohnehin schon warm ist.
-        </p>
+        <UiSectionTitle
+          eyebrow="Momo-Programm"
+          title="Für Hunde, denen das Aufstehen schwerer fällt."
+          description=" Gedacht als Ergänzung für ältere oder steife Hunde – meist im
+          Anschluss an einen Pflegetermin, wenn das Fell ohnehin schon warm ist."
+        />
 
         <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <article
@@ -321,12 +311,7 @@ const rules = [
     <!-- Gut zu wissen -->
     <section class="bg-sand-100">
       <div class="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-        <p class="eyebrow-tag text-clay-600">Gut zu wissen</p>
-        <h2
-          class="mt-3 max-w-2xl font-display text-3xl font-semibold text-moss-900 sm:text-4xl"
-        >
-          Drei Dinge vorab.
-        </h2>
+        <UiSectionTitle eyebrow="Gut zu wissen" title="Drei Dinge vorab." />
 
         <div class="mt-12 grid gap-6 sm:grid-cols-3">
           <div
@@ -350,25 +335,12 @@ const rules = [
     </section>
 
     <!-- CTA -->
-    <section class="bg-moss-900">
-      <div class="mx-auto max-w-3xl px-5 py-16 text-center md:px-8 md:py-20">
-        <h2
-          class="font-display text-3xl font-semibold text-sand-50 sm:text-4xl"
-        >
-          Unsicher, was dein Hund braucht?
-        </h2>
-        <p class="mx-auto mt-4 max-w-md leading-relaxed text-moss-100/85">
-          Schreib uns kurz die Rasse und wann er zuletzt beim Groomer war – dann
-          sagen wir dir, was sinnvoll ist und was es kostet.
-        </p>
-        <NuxtLink
-          to="/kontakt"
-          class="mt-8 inline-flex items-center gap-2 rounded-full bg-clay-500 px-7 py-3.5 text-sm font-semibold text-sand-50 shadow-tag transition-colors duration-200 hover:bg-clay-600"
-        >
-          <FontAwesomeIcon :icon="['fas', 'envelope']" />
-          Kurz nachfragen
-        </NuxtLink>
-      </div>
-    </section>
+    <UiCtaSection
+      title="Unsicher, was dein Hund braucht?"
+      description="Schreib uns kurz die Rasse und wann er zuletzt beim Groomer war – dann
+          sagen wir dir, was sinnvoll ist und was es kostet."
+      button-label="Kurz nachfragen"
+      button-to="/kontakt"
+    />
   </div>
 </template>
